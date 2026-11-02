@@ -53,8 +53,114 @@ Images!
 </p>
 <p align="center">
   <img src="images/case/case_boom.png" width="35.85%">
-  <img src="images/case/Second_Picture.png" width="55%">
+  <img src="images/case/second_Picture.png" width="55%">
 </p>
+
+
+## Firmware
+
+THE FIRMWARE. Yah the reviewer told me that I need it in here so here it is.
+
+**ESP32 Marauder** by justcallmekoko
+Source: https://github.com/justcallmekoko/ESP32Marauder
+Pinned release: **v1.20.0**, 28 Oct 2026, https://github.com/justcallmekoko/ESP32Marauder/releases/tag/v1.20.0
+
+
+### Pin mapping
+
+| Module pad | GPIO | Net | Connects to |
+|---|---|---|---|
+| 3 | EN | RESET | SW2, reset button |
+| 4 | GPIO4 | VBAT_SENSE | 100k/100k divider off BAT, ADC1_CH3 |
+| 5 | GPIO5 | BTN_SEL | SW5, select |
+| 6 | GPIO6 | BTN_BACK | SW6, back |
+| 10 | GPIO17 | GPS_TX | NEO-M8N TX, so ESP receive |
+| 11 | GPIO18 | GPS_RX | NEO-M8N RX, so ESP transmit |
+| 12 | GPIO8 | SD_CS | microSD chip select on the display module |
+| 13 | GPIO19 | USB_DN | USB-C D- |
+| 14 | GPIO20 | USB_DP | USB-C D+ |
+| 17 | GPIO9 | TFT_RST | ILI9341 reset |
+| 18 | GPIO10 | TFT_CS | ILI9341 chip select |
+| 19 | GPIO11 | MOSI | shared SPI, display and SD |
+| 20 | GPIO12 | SCLK | shared SPI, display and SD |
+| 21 | GPIO13 | MISO | shared SPI, display and SD |
+| 22 | GPIO14 | TFT_DC | ILI9341 data/command |
+| 23 | GPIO21 | TFT_LED | display backlight |
+| 27 | GPIO0 | BOOT | SW1, boot button |
+| 31 | GPIO38 | LED1 | status LED through 330R |
+| 32 | GPIO39 | LED2 | status LED through 330R |
+| 33 | GPIO40 | LED3 | status LED through 330R |
+| 38 | GPIO2 | BTN_DOWN | SW4, down |
+| 39 | GPIO1 | BTN_UP | SW3, up |
+
+
+
+### Board config
+
+```c
+#define ILI9341_DRIVER
+#define TFT_WIDTH  240
+#define TFT_HEIGHT 320
+
+#define TFT_MISO 13
+#define TFT_MOSI 11
+#define TFT_SCLK 12
+#define TFT_CS   10
+#define TFT_DC   14
+#define TFT_RST   9
+#define TFT_BL   21
+#define TFT_BACKLIGHT_ON HIGH
+
+#define SPI_FREQUENCY 40000000
+```
+
+Then a target block in `esp32_marauder/configs.h`.
+
+```c
+#ifdef MARAUDER_WARDRIVER
+  #define HAS_BT
+  #define HAS_BUTTONS
+  #define HAS_SCREEN
+  #define HAS_GPS
+  #define HAS_SD
+  #define USE_SD
+  #define HAS_BATTERY
+  #define HAS_PSRAM
+#endif
+
+// buttons, all active low to GND with internal pullups
+#ifdef MARAUDER_WARDRIVER
+  #define U_BTN  1
+  #define D_BTN  2
+  #define C_BTN  5
+  #define B_BTN  6
+  #define L_BTN -1
+  #define R_BTN -1
+  #define HAS_U
+  #define HAS_D
+  #define HAS_C
+  #define U_PULL true
+  #define D_PULL true
+  #define C_PULL true
+  #define L_PULL true
+  #define R_PULL true
+#endif
+
+// microSD shares the display SPI bus
+#ifdef MARAUDER_WARDRIVER
+  #define SD_CS 8
+  #define SD_MISO TFT_MISO
+  #define SD_MOSI TFT_MOSI
+  #define SD_SCK  TFT_SCLK
+#endif
+
+// NEO-M8N on UART1, 9600 baud default
+#ifdef MARAUDER_WARDRIVER
+  #define GPS_SERIAL_INDEX 1
+  #define GPS_RX 17
+  #define GPS_TX 18
+#endif
+```
 
 
 ## And yes, of course, the BOM;
@@ -71,6 +177,7 @@ Images!
 | SS34 Schottky | 1 | $1.01/4.81 | https://www.digikey.com/en/products/detail/onsemi/SS34/1052384 |
 | TYPE-C-31-M-12 | 1 | $0.19/0.90 RON | https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M12/ |
 | Keystone 1042 18650 holder | 1 | $5.99/28.53 RON | https://www.digikey.com/en/products/detail/keystone-electronics/1042/2745668 | 
+| Samsung INR18650-35E 3400mAh cell, flat top | 1 | $7.37/35.12 RON | https://botland.store/li-ion-batteries/15216-18650-li-ion-samsung-inr18650-35e-3400mah-5904422343071.html |
 | B3S-1000 | 6(10 pack) | $4.24/20.20 RON| https://www.digikey.com/en/products/detail/aratas-formerly-omron-components/b3s-1000/20686
 | slide switch, SPDT | 1 | $0.75/3.57RON | https://www.digikey.com/en/products/detail/c-k/OS102011MA1QN1/1981430 |
 | LED 0805 | 3 | $0.38/1.81 RON | https://www.digikey.com/en/products/detail/visual-communications-company-vcc/LSM0805452V/10229619 | 

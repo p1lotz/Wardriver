@@ -1,2 +1,24 @@
-Item,Qty,Supplier,Cost/item,Total Cost,link
-Estimated total shipping,1,,,$0.00,
+Part,Qty,Price,Link
+ESP32-S3-WROOM-1U-N16R8,1,$6.76/32.24 RON,https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1U-N16R8/16162641
+2.2 inch SPI TFT ILI9341 240x320 with microSD,1,$13.88/66.11 RON,https://www.amazon.com/Display-Module-240x320-ILI9341-Arduino/dp/B0F9XXV4V7
+GY-NEO-M8N GPS module + patch antenna,1,$17.45,https://www.addicore.com/products/neo-m8n-gps-gnss-module-with-eeprom
+TP4056 Lithium Battery Charger Module with Dual Protection (USB-C),1,$4.95/23.58 RON,https://www.crcibernetica.com/tp4056-lithium-battery-charger-module-with-dual-protection-usb-c/
+AP2112K-3.3,1,$0.17/0.81 RON,https://www.lcsc.com/product-detail/C51118.html
+AO3401A,1,$0.52/2.48 RON,https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3401A/1855773
+SS34 Schottky,1,$1.01/4.81 RON,https://www.digikey.com/en/products/detail/onsemi/SS34/1052384
+TYPE-C-31-M-12,1,$0.19/0.90 RON,https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M12/
+Keystone 1042 18650 holder,1,$5.99/28.53 RON,https://www.digikey.com/en/products/detail/keystone-electronics/1042/2745668
+Samsung INR18650-35E 3400mAh cell flat top,1,$7.37/35.12 RON,https://botland.store/li-ion-batteries/15216-18650-li-ion-samsung-inr18650-35e-3400mah-5904422343071.html
+B3S-1000,6 (10 pack),$4.24/20.20 RON,https://www.digikey.com/en/products/detail/aratas-formerly-omron-components/b3s-1000/20686
+SPDT slide switch,1,$0.75/3.57 RON,https://www.digikey.com/en/products/detail/c-k/OS102011MA1QN1/1981430
+LED 0805,3,$0.38/1.81 RON,https://www.digikey.com/en/products/detail/visual-communications-company-vcc/LSM0805452V/10229619
+220 ohm resistor,3,$0.30/1.43 RON,https://www.digikey.com/en/products/detail/yageo/RC0805JR-07330RL/728311
+10k ohm resistor,3,$0.33/1.57 RON,https://www.digikey.com/en/products/detail/vishay-dale/CRCW080510K0FKEAC/7928398
+100k ohm resistor,3,$0.30/1.43 RON,https://www.digikey.com/en/products/detail/yageo/RC0805JR-07100KL/728239
+5.1k ohm resistor,2,$0.20/0.95 RON,https://www.digikey.com/en/products/detail/yageo/RC0805JR-075K1L/728338
+100nF capacitor,4,$0.72/3.43 RON,https://www.digikey.com/en/products/detail/kemet/C0805C104K5RACTU/411169
+1uF capacitor,1,$0.67/3.19 RON,https://eu.mouser.com/en/ProductDetail/KYOCERA-AVX/KAF21KR71H105JU
+10uF capacitor,3,$1.02/4.86 RON,https://www.digikey.com/en/products/detail/yageo/CC0805ZKY5V6BB106/2103093
+22uF capacitor,2,$0.72/3.43 RON,https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR61E226ME44L/4905535
+PCB from JLCPCB,5 pack,$4.00/19.05 RON,N/A
+Estimated total shipping,1,$0.00,
