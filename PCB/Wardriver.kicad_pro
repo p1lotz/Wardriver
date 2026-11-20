@@ -136,10 +136,6 @@
           ""
         ],
         [
-          "silk_over_copper|168399819|91599999|8b34aab3-167e-4813-b68f-c88360e9cc25|3ff585f2-f365-4be1-8840-e2b9a0601d1f",
-          ""
-        ],
-        [
           "silk_over_copper|168795000|92885713|8b34aab3-167e-4813-b68f-c88360e9cc25|2feaec1d-561f-4a4b-a9dd-5dd93647c28d",
           ""
         ],
@@ -683,9 +679,9 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../3D models/Wardriver.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -916,7 +912,7 @@
         "uuid": "dde587c3-8752-406a-9343-d022aa200caa"
       }
     ],
-    "used_designators": "U1-8,J1-11,#FLG1-5,#FLG101-103,R1-11,R171,R331-332,#PWR1-3,#PWR101-106,AE1-3,L121-125,L131-132,C1-10,C51,C121-126,C131,Y1,R330Ω1-3,D1-4,SW1-8,C100nF1-4,R10kΩ1,BT1-2,R10k1-3,Q1,R5.1k1-3,C10uF1,C22uF1-2,R100k1-3,C1µF1-2,C22µF1",
+    "used_designators": "U1-8,#FLG1-5,#FLG101-103,R1-11,R171,R331-332,J1-11,AE1-3,L121-125,L131-132,#PWR1-3,#PWR101-106,C1-10,C51,C121-126,C131,R330Ω1-3,Y1,D1-4,SW1-8,C100nF1-4,R10kΩ1,BT1-2,R10k1-3,Q1,R5.1k1-3,C10uF1,C22uF1-2,R100k1-3,C1µF1-2,C22µF1",
     "variants": []
   },
   "sheets": [
